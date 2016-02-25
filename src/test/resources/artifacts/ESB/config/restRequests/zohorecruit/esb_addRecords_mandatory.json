@@ -1,0 +1,8 @@
+{
+  "apiUrl": "%s(apiUrl)",
+  "authToken": "%s(authToken)",
+  "module": "Candidates",
+  "scope": "%s(scope)",
+  "xmlData": "<Candidates><row no=\"1\"><FL val=\"Last Name\">testing</FL><FL val=\"Email\">%s(email)</FL></row></Candidates>",
+  "responseFormat": "json"
+}

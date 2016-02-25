@@ -1,0 +1,10 @@
+{
+  "apiUrl": "%s(apiUrl)",
+  "authToken": "%s(authToken)",
+  "scope": "%s(scope)",
+  "responseFormat": "json",
+  "candidateIds": "%s(recordId1)",
+  "candidateStatus": "%s(changeStatus)",
+  "jobId": "%s(jobRecordIdAssociate)",
+  "comments": "Placed in Senior Java Development"
+}
