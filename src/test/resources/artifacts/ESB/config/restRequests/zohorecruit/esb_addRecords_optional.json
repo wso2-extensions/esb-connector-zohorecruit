@@ -1,0 +1,10 @@
+{
+  "apiUrl": "%s(apiUrl)",
+  "authToken": "%s(authToken)",
+  "module": "Candidates",
+  "scope": "%s(scope)",
+  "xmlData": "<Candidates><row no=\"1\"><FL val=\"Last Name\">James</FL><FL val=\"Email\">%s(email)</FL></row></Candidates>",
+  "duplicateCheck": "2",
+  "wfTrigger": "false",
+  "responseFormat": "json"
+}
