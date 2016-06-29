@@ -56,15 +56,15 @@ Steps to follow in setting integration test.
 
  5. Update the ZohoRecruit properties file at location "{ZOHORECRUIT_CONNECTOR_HOME}/src/test/resources/artifacts/ESB/connector/config" as below.
 	
-	i)		apiUrl 							- 	The API URL specific to the created account.
-	ii) 	authToken						-   Use the API Key obtained under Step 4 ii).
-	iii)	scope							- 	Specify this value as recruitapi.
-	iv)		updatePostingTitle				- 	Use a valid string for the posting title.
-	v)		jobId 							-	Use a valid record Id of a created job under Step 4 iii.
-	vi)		getRecordsFromIndex				-	Use a valid number for the start index of range to select records (default value is 1).
-	vii)	getRecordsToIndex				-	Use a valid number for the ending index of range to select records (default value is 20 and the maximum value allowed is 200).
-	viii)	getRecordsSortColumnString		-	Use a valid column name of a JobOpening.
-	ix)		changeStatus					-	Use a valid candidate status value.
+	i)	apiUrl 						-   The API URL specific to the created account.
+	ii) 	authToken					-   Use the API Key obtained under Step 4 ii).
+	iii)	scope						-   Specify this value as recruitapi.
+	iv)	updatePostingTitle				-   Use a valid string for the posting title.
+	v)	jobId 						-   Use a valid record Id of a created job under Stepiii.
+	vi)	getRecordsFromIndex				-   Use a valid number for the start index of range to select records (default value is 1).
+	vii)	getRecordsToIndex				-   Use a valid number for the ending index of range to select records (default value is 20 and the maximum value allowed is 200).
+	viii)	getRecordsSortColumnString	        	-   Use a valid column name of a JobOpening.
+	ix)	changeStatus					-   Use a valid candidate status value.
 
  6. Navigate to "{ESB_Connector_Home}/" and run the following command.
       $ mvn clean install
