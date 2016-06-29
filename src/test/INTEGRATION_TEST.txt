@@ -10,8 +10,8 @@ Pre-requisites:
 Tested Platform: 
 
  - Microsoft WINDOWS V-7
- - UBUNTU 13.04
- - WSO2 ESB 4.9.0
+ - UBUNTU 13.04, 14.04
+ - WSO2 ESB 4.9.0, 5.0.0-BETA
 
 Note:
 	This test suite can be executed based on two scenarios.
@@ -20,7 +20,7 @@ Note:
 
 Steps to follow in setting integration test.
 
- 1. Download ESB WSO2 ESB 4.9.0 from official website.
+ 1. Download ESB WSO2 ESB 5.0.0-BETA from official website.
 
  2. The ESB should be configured as below;
 	i)  Please make sure that the below mentioned Axis configurations are enabled (/repository/conf/axis2/axis2.xml).
@@ -34,19 +34,19 @@ Steps to follow in setting integration test.
  3.  Follow the below mentioned steps to add valid certificate to access zoho recruit API over https.
 
     	i) 	 Extract the certificate from browser(Mozilla Firefox) by navigating to 'https://recruit.zoho.com/'
-    	ii)  Go to new ESB WSO2 ESB 4.9.0 folder and place the downloaded certificate into "<ESB_HOME>/repository/resources/security/" and
+    	ii)  Go to new ESB WSO2 ESB 5.0.0-BETA folder and place the downloaded certificate into "<ESB_HOME>/repository/resources/security/" and
     		 "{zohorecruit_Connector_Home}/src/test/resources/keystores/products" folders.
-        iii) Navigate to "<ESB_HOME>/repository/resources/security/" using command prompt and execute the following command.
 
-    			keytool -importcert -file CERT_FILE_NAME -keystore client-truststore.jks -alias "CERT_NAME"
+        iii) Navigate to the "<ZOHORECRUIT_CONNECTOR_HOME>/src/test/resources/keystores/products" location from command prompt and execute the following command to import ZohoRecruit certificate in to keystore. Give "wso2carbon" as password.
+        			keytool -importcert -file CERT_FILE_NAME -keystore wso2carbon.jks -alias "CERT_NAME".
+        			NOTE : 	CERT_FILE_NAME is the file name which was extracted from ZohoRecruit with  the extension, change it accordingly (e.g. ZohoRecruit.crt).
+        					CERT_NAME is an arbitrary name for the certificate. (e.g. ZohoRecruit)
+        iv)  Navigate to the "<ESB_HOME>/repository/resources/security" location from command prompt and execute the following command to import ZohoRecruit certificate in to keystore. Give "wso2carbon" as password.
+        			keytool -importcert -file CERT_FILE_NAME -keystore client-truststore.jks -alias "CERT_NAME".
+        			NOTE : 	CERT_FILE_NAME is the file name which was extracted from ZohoRecruit with  the extension, change it accordingly (e.g. ZohoRecruit.crt).
+        					CERT_NAME is an arbitrary name for the certificate. (e.g. ZohoRecruit)
 
-    		 	This command will import Eloqua certificate into keystore.
-    		 	To import the certificate give "wso2carbon" as password. Press "Y" to complete certificate import process.
-
-    		 	NOTE : CERT_FILE_NAME - Replace CERT_FILE_NAME with the file name that was extracted from zohorecruit with the extension. (e.g. zohorecruit.crt)
-    			    CERT_NAME - Replace CERT_NAME with an arbitrary name for the certificate. (e.g. zoho)
-
- 4. Compress modified ESB as 4.9.0 and copy that zip file in to location "{Connector_Home}/repository/".
+ 4. Compress modified ESB as 5.0.0-BETA and copy that zip file in to location "{Connector_Home}/repository/".
 
  4. Create a ZohoRecruit trial account and derive the API Key.
 	i) 		Using the URL "https://www.zoho.com/recruit/sign-up.html" create a ZohoRecruit trial account.
@@ -54,7 +54,7 @@ Steps to follow in setting integration test.
 			https://accounts.zoho.com/apiauthtoken/nb/create?SCOPE=zohopeople/recruitapi&EMAIL_ID={username}&PASSWORD={application_password}
 	iii)		Create a Job Opening by following the path {Job Openings > Add job opening} and fetch the record Ids of those job openings.
 
- 5. Update the ZohoRecruit properties file at location "{Connector_Home}/src/test/resources/artifacts/ESB/connector/config" as below.
+ 5. Update the ZohoRecruit properties file at location "{ZOHORECRUIT_CONNECTOR_HOME}/src/test/resources/artifacts/ESB/connector/config" as below.
 	
 	i)		apiUrl 							- 	The API URL specific to the created account.
 	ii) 	authToken						-   Use the API Key obtained under Step 4 ii).

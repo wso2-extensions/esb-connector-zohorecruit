@@ -5,6 +5,6 @@
   "responseFormat": "json",
   "candidateIds": "%s(recordId1)",
   "candidateStatus": "%s(changeStatus)",
-  "jobId": "%s(jobRecordIdAssociate)",
+  "jobId": "%s(jobId)",
   "comments": "Placed in Senior Java Development"
 }

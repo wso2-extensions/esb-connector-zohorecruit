@@ -2,7 +2,7 @@
   "apiUrl": "%s(apiUrl)",
   "authToken": "%s(authToken)",
   "scope": "%s(scope)",
-  "candidateIds": "%s(recordId)",
+  "candidateIds": "%s(recordId1)",
   "candidateStatus": "",
   "responseFormat": "json"
 }
