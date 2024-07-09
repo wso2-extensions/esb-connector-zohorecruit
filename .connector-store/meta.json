@@ -1,0 +1,21 @@
+{
+    "name": "Zoho Recruit",
+    "owner": "WSO2",
+    "category": "Human Resource Management",
+    "documentationUrl": "https://docs.wso2.com/display/ESBCONNECTORS/Zoho+Recruit+Connector",
+    "description": "The Zoho Recruit connector allows you to access the Zoho Recruit REST API through WSO2 ESB. Zoho Recruit is an easy-to-use applicant tracking system and recruitment software that helps staffing agencies and recruiting departments track job openings, resumes, candidates, and contacts more quickly and efficiently.",
+    "status": "Unsupported",
+    "labels": [
+        "connector"
+    ],
+    "releases": [
+        {
+            "tagName": "v1.0.1",
+            "products": [
+                "ESB 5.0.0",
+                "ESB 4.9.0"
+            ],
+            "isHidden": false
+        }
+    ]
+}
